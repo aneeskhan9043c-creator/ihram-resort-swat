@@ -233,7 +233,7 @@ export const Footer: React.FC = () => {
                     CNIC / Identity Requirement
                   </h4>
                   <p className="text-slate-300 text-xs">
-                    As per KPK Police and Pakistan Government regulations, all adult guests must present original CNIC or valid Passport at check-in.
+                    As per local police and Pakistan Government regulations, all adult guests must present original CNIC or valid Passport at check-in.
                   </p>
                 </div>
               </div>

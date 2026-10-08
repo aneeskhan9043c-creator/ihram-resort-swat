@@ -104,7 +104,7 @@ export const HOTEL_INFO = {
   name: "IHRAM HOTEL AND RESORT",
   subname: "MALAM JABBA ROAD, SWAT",
   tagline: "Luxury Family Stay & Scenic Mountain Views near Malam Jabba",
-  address: "Main Malam Jabba Road, Swat Valley, KPK, Pakistan",
+  address: "Main Malam Jabba Road, Swat Valley, Pakistan",
   phonePrimary: "+92 319 0717774",
   phoneSecondary: "+92 333 9887544",
   whatsappNumber: "+923190717774",
@@ -372,36 +372,31 @@ export const TESTIMONIALS: ReviewItem[] = [
   }
 ];
  
-export const NEARBY_ATTRACTIONS = [
+export interface AttractionItem {
+  name: string;
+  distance: string;
+  description: string;
+  icon: string;
+}
+
+export const NEARBY_ATTRACTIONS: AttractionItem[] = [
   {
-    name: "Main Malam Jabba Road",
-    distance: "Direct Access / On Main Road",
-    description: "Direct road frontage with smooth access and safe parking."
+    name: "Malam Jabba Zoo",
+    distance: "5 km",
+    description: "Family-friendly zoo & natural attraction nearby",
+    icon: "🦁"
   },
   {
-    name: "Malam Jabba Ski Resort & Chairlift",
-    distance: "~35 km (45 min scenic drive)",
-    description: "Snow skiing, chairlift rides, zip-line, and alpine sports."
+    name: "PC (Pearl Continental) Malam Jabba",
+    distance: "13 km",
+    description: "Luxury resort, ski spot & chairlift area",
+    icon: "🏔️"
   },
   {
-    name: "Mingora Main Bazaar & Shopping",
-    distance: "~15 km (25 min drive)",
-    description: "Swati shawls, emerald gems, handicrafts, and local shopping."
-  },
-  {
-    name: "Swat Riverbank & Scenic Views",
-    distance: "~10 min drive",
-    description: "Glacial mountain river views and scenic riverside photo spots."
-  },
-  {
-    name: "Swat Museum & Saidu Sharif",
-    distance: "~18 km (30 min drive)",
-    description: "Ancient Gandhara archaeological heritage and museum artifacts."
-  },
-  {
-    name: "Kalam Valley",
-    distance: "95 km (~3 hrs drive)",
-    description: "Lush pine forests, roaring streams, and alpine valleys."
+    name: "Mingora City",
+    distance: "35 km",
+    description: "Main commercial city center & market hub of Swat",
+    icon: "🏙️"
   }
 ];
 

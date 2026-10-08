@@ -53,7 +53,7 @@ export const LocationSection: React.FC = () => {
               </h3>
 
               {/* Clean Travel Distances List with Spring Reveal */}
-              <div className="space-y-2.5">
+              <div className="space-y-3">
                 {NEARBY_ATTRACTIONS.map((spot, idx) => (
                   <motion.div
                     key={spot.name}
@@ -61,24 +61,27 @@ export const LocationSection: React.FC = () => {
                     whileInView={{ opacity: 1, x: 0, scale: 1 }}
                     viewport={{ once: true, amount: 0.2 }}
                     transition={{ type: 'spring', stiffness: 260, damping: 20, delay: idx * 0.08 }}
-                    className="flex items-center justify-between gap-3 py-2.5 px-3 rounded-xl bg-white border border-zinc-200/80 shadow-2xs hover:border-[#B89762]/40 hover:-translate-x-0.5 transition-all"
+                    className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs hover:border-[#B89762]/50 hover:shadow-sm hover:-translate-x-0.5 transition-all group"
                   >
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <span className="w-2 h-2 rounded-full bg-[#B89762] shrink-0" />
-                      <span className="text-xs sm:text-sm font-medium text-zinc-800 truncate">
-                        {spot.name}
+                    <div className="flex items-start gap-3 min-w-0">
+                      <span className="text-xl shrink-0 w-9 h-9 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center">
+                        {spot.icon}
                       </span>
+                      <div className="min-w-0">
+                        <span className="text-xs sm:text-sm font-bold text-zinc-900 truncate block group-hover:text-amber-700 transition-colors">
+                          {spot.name}
+                        </span>
+                        <p className="text-[11px] text-zinc-500 line-clamp-1 mt-0.5">
+                          {spot.description}
+                        </p>
+                      </div>
                     </div>
                     <motion.span
                       initial={{ scale: 0.8, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ type: 'spring', stiffness: 300, damping: 15, delay: idx * 0.08 + 0.1 }}
-                      className={`text-[11px] sm:text-xs font-bold px-2.5 py-1 rounded-full whitespace-nowrap shrink-0 border ${
-                        idx === 0
-                          ? 'bg-amber-50 text-amber-800 border-amber-200'
-                          : 'bg-zinc-100 text-zinc-800 border-zinc-200'
-                      }`}
+                      className="text-xs sm:text-sm font-extrabold px-3 py-1.5 rounded-full whitespace-nowrap shrink-0 border bg-amber-500/10 text-amber-800 border-amber-500/25 shadow-2xs"
                     >
                       {spot.distance}
                     </motion.span>
