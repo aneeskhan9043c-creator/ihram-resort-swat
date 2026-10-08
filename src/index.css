@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: #18181b;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom utilities for luxury hospitality styling */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.text-gold {
+  color: #B89762;
+}
+
+.bg-gold {
+  background-color: #B89762;
+}
+
+.border-gold {
+  border-color: #C5A880;
+}
