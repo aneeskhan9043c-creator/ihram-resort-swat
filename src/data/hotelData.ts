@@ -120,43 +120,49 @@ export const HOTEL_INFO = {
 };
 
 export const ROOMS: RoomType[] = [
-  {
-    id: "single-bed-standard",
-    name: "Standard Single Bed Room",
-    tagline: "Cozy & Budget-Friendly Stay with Mountain Air",
-    pricePKR: 3000,
-    pricePerNight: "PKR 3,000",
-    image: "https://i.postimg.cc/Y9XwSYcQ/Whats-App-Image-2026-10-11-at-12-37-18-PM.jpg",
-    images: [
-      "https://i.postimg.cc/Y9XwSYcQ/Whats-App-Image-2026-10-11-at-12-37-18-PM.jpg",
-      "https://i.postimg.cc/RFPz0KrN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(1).jpg",
-      "https://i.postimg.cc/1tWZzwxN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(2).jpg",
-      "https://i.postimg.cc/3RLHwmMg/Whats-App-Image-2026-10-11-at-12-37-19-PM.jpg"
-    ],
-    gallery: [
-      "https://i.postimg.cc/Y9XwSYcQ/Whats-App-Image-2026-10-11-at-12-37-18-PM.jpg",
-      "https://i.postimg.cc/RFPz0KrN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(1).jpg",
-      "https://i.postimg.cc/1tWZzwxN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(2).jpg",
-      "https://i.postimg.cc/3RLHwmMg/Whats-App-Image-2026-10-11-at-12-37-19-PM.jpg"
-    ],
-    size: "250 sq. ft",
-    bedType: "1 Comfortable Single Bed",
-    view: "Peaceful Neighborhood & Valley Breeze",
-    maxGuests: "1 - 2 Guests",
-    features: [
-      "Cozy Single Bed with Fresh Linens & Warm Blanket",
-      "Attached Private Washroom with 24/7 Hot Water",
-      "Budget-Friendly Stay with High-Speed Wi-Fi"
-    ],
-    detailedInclusions: [
-      "Comfortable single bed setup with clean pillows and warm bedding",
-      "Attached private bathroom with running hot and cold water",
-      "Quiet environment with great ventilation and natural light",
-      "Free Wi-Fi access and 24/7 power backup",
-      "Daily room cleaning service"
-    ],
-    description: "A cozy, affordable, and comfortable single bed room designed for solo travelers or budget visitors looking for a clean and peaceful stay in Swat."
-  },
+{
+  id: "single-bed-standard",
+  name: "Standard Single Bed Room",
+  tagline: "Cozy & Budget-Friendly Stay with Mountain Air",
+  pricePKR: 3000,
+  pricePerNight: "PKR 3,000",
+  image: "https://i.postimg.cc/fThNDTnm/Whats-App-Image-2026-10-11-at-6-14-29-PM.jpg",
+  images: [
+    "https://i.postimg.cc/fThNDTnm/Whats-App-Image-2026-10-11-at-6-14-29-PM.jpg",
+    "https://i.postimg.cc/c1zSjMTj/Whats-App-Image-2026-10-11-at-9-12-55-PM-(1).jpg",
+    "https://i.postimg.cc/qBwtCYJp/Whats-App-Image-2026-10-11-at-9-12-56-PM.jpg",
+    "https://i.postimg.cc/qBFTYXQZ/Whats-App-Image-2026-10-11-at-6-27-15-PM.jpg",
+    "https://i.postimg.cc/8kYS3Bww/Whats-App-Image-2026-10-11-at-6-15-40-PM.jpg",
+    "https://i.postimg.cc/jq1b9Qvm/Whats-App-Image-2026-10-11-at-6-15-42-PM.jpg",
+    "https://i.postimg.cc/66PXSLzP/Whats-App-Image-2026-10-11-at-6-15-47-PM.jpg"
+  ],
+  gallery: [
+    "https://i.postimg.cc/fThNDTnm/Whats-App-Image-2026-10-11-at-6-14-29-PM.jpg",
+    "https://i.postimg.cc/c1zSjMTj/Whats-App-Image-2026-10-11-at-9-12-55-PM-(1).jpg",
+    "https://i.postimg.cc/qBwtCYJp/Whats-App-Image-2026-10-11-at-9-12-56-PM.jpg",
+    "https://i.postimg.cc/qBFTYXQZ/Whats-App-Image-2026-10-11-at-6-27-15-PM.jpg",
+    "https://i.postimg.cc/8kYS3Bww/Whats-App-Image-2026-10-11-at-6-15-40-PM.jpg",
+    "https://i.postimg.cc/jq1b9Qvm/Whats-App-Image-2026-10-11-at-6-15-42-PM.jpg",
+    "https://i.postimg.cc/66PXSLzP/Whats-App-Image-2026-10-11-at-6-15-47-PM.jpg"
+  ],
+  size: "250 sq. ft",
+  bedType: "1 Comfortable Single Bed",
+  view: "Peaceful Neighborhood & Valley Breeze",
+  maxGuests: "1 - 2 Guests",
+  features: [
+    "Cozy Single Bed with Fresh Linens & Warm Blanket",
+    "Attached Private Washroom with 24/7 Hot Water",
+    "Budget-Friendly Stay with High-Speed Wi-Fi"
+  ],
+  detailedInclusions: [
+    "Comfortable single bed setup with clean pillows and warm bedding",
+    "Attached private bathroom with running hot and cold water",
+    "Quiet environment with great ventilation and natural light",
+    "Free Wi-Fi access and 24/7 power backup",
+    "Daily room cleaning service"
+  ],
+  description: "A cozy, affordable, and comfortable single bed room designed for solo travelers or budget visitors looking for a clean and peaceful stay in Swat."
+},
  {
   id: "standard-family",
   name: "Standard Family Room",

@@ -106,6 +106,21 @@ export const AboutSection: React.FC = () => {
               ☀️ Sunny Alpine Garden &amp; Family Recreation
             </div>
           </div>
+
+          {/* Card 6 */}
+          <div className="relative rounded-3xl overflow-hidden shadow-lg border border-zinc-200/80 group aspect-4/3 bg-zinc-100">
+            <img
+              src="https://i.postimg.cc/8cpmm6fY/Whats-App-Image-2026-10-11-at-9-12-54-PM.jpg"
+              alt="Pine Slopes & Breathtaking Malam Jabba Valley"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 shadow-md">
+              🌲 Pine Slopes &amp; Malam Jabba Valley View
+            </div>
+          </div>
         </div>
 
         {/* Feature Highlights & CTA Section */}
