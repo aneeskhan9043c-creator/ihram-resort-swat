@@ -4,6 +4,9 @@ export interface RoomType {
   tagline: string;
   pricePKR: number;
   pricePerNight: string;
+  originalPricePerNight?: string;
+  discountBadge?: string;
+  promoTag?: string;
   image: string;
   images?: string[];
   gallery?: string[];
@@ -104,7 +107,7 @@ export const HOTEL_INFO = {
   name: "IHRAM HOTEL AND RESORT",
   subname: "MALAM JABBA ROAD, SWAT",
   tagline: "Luxury Family Stay & Scenic Mountain Views near Malam Jabba",
-  address: "Main Malam Jabba Road, Swat Valley, Pakistan",
+  address: "Main Malam Jabba Road, Swat, Pakistan",
   phonePrimary: "+92 319 0717774",
   phoneSecondary: "+92 333 9887544",
   whatsappNumber: "+923190717774",
@@ -118,135 +121,208 @@ export const HOTEL_INFO = {
 
 export const ROOMS: RoomType[] = [
   {
-    id: "standard-family",
-    name: "Standard Family Room",
-    tagline: "Comfortable Family Stay & Mountain Air",
-    pricePKR: 5000,
-    pricePerNight: "PKR 5,000",
-    image: "/images/rooms/family-room-wide.jpg",
-    gallery: [
-      "/images/rooms/family-room-wide.jpg",
-      "/images/rooms/family-room-angle.jpg",
-      "/images/rooms/family-room-beds.jpg",
-      "/images/rooms/family-room-bath.jpg"
-    ],
-    size: "280 sq. ft",
-    bedType: "3 Single Wooden Beds",
-    view: "Pine & Mountain View",
-    maxGuests: "3 - 4 Guests",
-    features: [
-      "3 Single Wooden Beds with Warm Red Rose Blankets",
-      "Attached Private Washroom with 24/7 Hot Water Geyser",
-      "Clean Marble Flooring, Window Curtains & Wi-Fi"
-    ],
-    detailedInclusions: [
-      "3 authentic wooden single beds with fresh white pillows & warm floral blankets",
-      "Attached private washroom with ceramic tiles, washbasin & 24/7 hot water",
-      "Polished marble tiled flooring with full-length window curtains",
-      "Free high-speed Wi-Fi access",
-      "24/7 generator backup for uninterrupted electricity",
-      "Daily room cleaning & room service"
-    ],
-    description: "Authentic, clean and family-friendly room featuring 3 comfortable wooden beds with warm red rose blankets, clean marble flooring, large curtained windows, and an attached tiled washroom with 24/7 hot water."
-  },
-  {
-    id: "executive-double",
-    name: "Executive Double Room",
-    tagline: "Ideal for Couples & Modern Comfort",
-    pricePKR: 8000,
-    pricePerNight: "PKR 8,000",
-    image: "/images/rooms/executive-double.jpg",
-    gallery: [
-      "/images/rooms/executive-double.jpg",
-      "/images/rooms/family-room-angle.jpg",
-      "/images/rooms/family-room-bath.jpg"
-    ],
-    size: "320 sq. ft",
-    bedType: "1 King Bed",
-    view: "Malam Jabba Valley View",
-    maxGuests: "2 Adults + 1 Child",
-    features: [
-      "1 King Bed with Luxury Linen",
-      "Sitting Lounge & Smart LED TV",
-      "24/7 Hot Water & Power Backup"
-    ],
-    detailedInclusions: [
-      "Plush King-size bed with comfortable orthopedic mattress",
-      "Comfortable sitting area with tea table",
-      "Attached modern tiled washroom with 24/7 hot water",
-      "High-speed Wi-Fi & Smart TV with cable",
-      "24/7 heavy generator power backup",
-      "Direct room service from in-house kitchen"
-    ],
-    description: "Elegant executive room featuring plush king bedding, tea lounge seating, and panoramic vistas of the Malam Jabba valley."
-  },
-  {
-    id: "vip-mountain-view",
-    name: "VIP Mountain View Room",
-    tagline: "Breathtaking Balcony Mountain Panorama",
-    pricePKR: 10000,
-    pricePerNight: "PKR 10,000",
-    image: "/images/rooms/vip-mountain-view.jpg",
-    gallery: [
-      "/images/rooms/vip-mountain-view.jpg"
-    ],
-    size: "380 sq. ft",
-    bedType: "1 King Bed + 1 Single Bed",
-    view: "Direct Mountain & Peak Panorama",
-    maxGuests: "3 Adults",
-    features: [
-      "Private Balcony with 180° Mountain Views",
-      "VIP Interior & Sitting Area",
-      "24/7 Hot Water & Fast Room Service"
-    ],
-    detailedInclusions: [
-      "Private open-air balcony facing scenic Swat mountain peaks",
-      "1 Master King Bed plus additional single bed",
-      "Attached premium tiled bathroom with constant hot water",
-      "Tea table set with fresh mountain breeze",
-      "Full generator power backup around the clock",
-      "Priority 24/7 in-room dining service"
-    ],
-    description: "VIP suite experience with private scenic balcony, luxury bedding, and unobstructed 180-degree mountain peaks scenery."
-  },
-  {
-    id: "guest-house-suite",
-    name: "Guest House Suite - 2 Rooms + TV Lounge",
-    tagline: "Ultimate Large Family & Group Suite",
-    pricePKR: 12000,
-    pricePerNight: "PKR 12,000",
-    image: "/images/rooms/guesthouse-lounge.jpg",
+    id: "single-bed-standard",
+    name: "Standard Single Bed Room",
+    tagline: "Cozy & Budget-Friendly Stay with Mountain Air",
+    pricePKR: 3000,
+    pricePerNight: "PKR 3,000",
+    image: "https://i.postimg.cc/Y9XwSYcQ/Whats-App-Image-2026-10-11-at-12-37-18-PM.jpg",
     images: [
-      "/images/rooms/guesthouse-lounge.jpg",
-      "/images/rooms/guesthouse-bedroom1.jpg",
-      "/images/rooms/guesthouse-bedroom2.jpg",
-      "/images/rooms/guesthouse-bathroom.jpg"
+      "https://i.postimg.cc/Y9XwSYcQ/Whats-App-Image-2026-10-11-at-12-37-18-PM.jpg",
+      "https://i.postimg.cc/RFPz0KrN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(1).jpg",
+      "https://i.postimg.cc/1tWZzwxN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(2).jpg",
+      "https://i.postimg.cc/3RLHwmMg/Whats-App-Image-2026-10-11-at-12-37-19-PM.jpg"
     ],
     gallery: [
-      "/images/rooms/guesthouse-lounge.jpg",
-      "/images/rooms/guesthouse-bedroom1.jpg",
-      "/images/rooms/guesthouse-bedroom2.jpg",
-      "/images/rooms/guesthouse-bathroom.jpg"
+      "https://i.postimg.cc/Y9XwSYcQ/Whats-App-Image-2026-10-11-at-12-37-18-PM.jpg",
+      "https://i.postimg.cc/RFPz0KrN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(1).jpg",
+      "https://i.postimg.cc/1tWZzwxN/Whats-App-Image-2026-10-11-at-12-37-18-PM-(2).jpg",
+      "https://i.postimg.cc/3RLHwmMg/Whats-App-Image-2026-10-11-at-12-37-19-PM.jpg"
     ],
-    size: "650 sq. ft",
-    bedType: "2 Master Bedrooms + Living Lounge",
-    view: "Panoramic Mountain & Valley View",
-    maxGuests: "6 - 8 Guests",
+    size: "250 sq. ft",
+    bedType: "1 Comfortable Single Bed",
+    view: "Peaceful Neighborhood & Valley Breeze",
+    maxGuests: "1 - 2 Guests",
     features: [
-      "2 Separate Bedrooms + Living TV Lounge",
-      "Private Dining Space for Families",
-      "2 Attached Washrooms with 24/7 Hot Water"
+      "Cozy Single Bed with Fresh Linens & Warm Blanket",
+      "Attached Private Washroom with 24/7 Hot Water",
+      "Budget-Friendly Stay with High-Speed Wi-Fi"
     ],
     detailedInclusions: [
-      "Two fully private bedrooms with clean double/king beds",
-      "Spacious furnished living room with sofa set & LED TV",
-      "Two attached modern washrooms with constant hot water",
-      "Family dining table for private in-suite meals",
-      "Heavy-duty generator backup for uninterrupted electricity",
-      "Dedicated room service attendant for tea & dining"
+      "Comfortable single bed setup with clean pillows and warm bedding",
+      "Attached private bathroom with running hot and cold water",
+      "Quiet environment with great ventilation and natural light",
+      "Free Wi-Fi access and 24/7 power backup",
+      "Daily room cleaning service"
     ],
-    description: "Complete guest house suite with two private master bedrooms, dedicated furnished TV lounge, dining area, and 2 attached baths."
-  }
+    description: "A cozy, affordable, and comfortable single bed room designed for solo travelers or budget visitors looking for a clean and peaceful stay in Swat."
+  },
+ {
+  id: "standard-family",
+  name: "Standard Family Room",
+  tagline: "Comfortable Family Stay & Mountain Air",
+  pricePKR: 5000,
+  pricePerNight: "PKR 5,000",
+  image: "https://i.postimg.cc/0NzVRSkb/Whats-App-Image-2026-10-07-at-3-10-18-PM.jpg",
+  images: [
+    "https://i.postimg.cc/0NzVRSkb/Whats-App-Image-2026-10-07-at-3-10-18-PM.jpg",
+    "https://i.postimg.cc/KY10STGF/Whats-App-Image-2026-10-07-at-3-10-18-PM-(1).jpg",
+    "https://i.postimg.cc/ZqWwtNbR/Whats-App-Image-2026-10-07-at-3-10-19-PM.jpg"
+  ],
+  gallery: [
+    "https://i.postimg.cc/0NzVRSkb/Whats-App-Image-2026-10-07-at-3-10-18-PM.jpg",
+    "https://i.postimg.cc/KY10STGF/Whats-App-Image-2026-10-07-at-3-10-18-PM-(1).jpg",
+    "https://i.postimg.cc/ZqWwtNbR/Whats-App-Image-2026-10-07-at-3-10-19-PM.jpg"
+  ],
+  size: "280 sq. ft",
+  bedType: "3 Single Wooden Beds",
+  view: "Pine & Mountain View",
+  maxGuests: "3 - 4 Guests",
+  features: [
+    "3 Single Wooden Beds with Warm Red Rose Blankets",
+    "Attached Private Bathroom with Electric Geyser & 24/7 Hot Water",
+    "Clean Marble Flooring, Window Curtains & Wi-Fi"
+  ],
+  detailedInclusions: [
+    "3 authentic wooden single beds with fresh white pillows & warm floral blankets",
+    "Attached private bathroom equipped with electric geyser for 24/7 hot water",
+    "Polished marble tiled flooring with full-length window curtains",
+    "Free high-speed Wi-Fi access",
+    "24/7 generator backup for uninterrupted electricity",
+    "Daily room cleaning & room service"
+  ],
+  description: "Authentic, clean and family-friendly room featuring 3 comfortable wooden beds with warm bedding, attached bathroom with electric geyser, and peaceful mountain atmosphere."
+},
+{
+  id: "deluxe-mountain-view",
+  name: "Deluxe Mountain View Room",
+  tagline: "Spacious Room with Stunning Sunshine & Mountain Windows",
+  pricePKR: 7000,
+  pricePerNight: "PKR 7,000",
+  originalPricePerNight: "PKR 7,778",
+  discountBadge: "10% OFF",
+  promoTag: "🔥 Limited Time Offer - 10% OFF",
+  image: "https://i.postimg.cc/WbQGFyjf/Whats-App-Image-2026-10-07-at-3-05-36-PM.jpg",
+  images: [
+    "https://i.postimg.cc/WbQGFyjf/Whats-App-Image-2026-10-07-at-3-05-36-PM.jpg",
+    "https://i.postimg.cc/jdGHw1KZ/Whats-App-Image-2026-10-07-at-3-05-36-PM-(1).jpg",
+    "https://i.postimg.cc/hPHLzYgy/Whats-App-Image-2026-10-07-at-3-05-37-PM.jpg"
+  ],
+  gallery: [
+    "https://i.postimg.cc/WbQGFyjf/Whats-App-Image-2026-10-07-at-3-05-36-PM.jpg",
+    "https://i.postimg.cc/jdGHw1KZ/Whats-App-Image-2026-10-07-at-3-05-36-PM-(1).jpg",
+    "https://i.postimg.cc/hPHLzYgy/Whats-App-Image-2026-10-07-at-3-05-37-PM.jpg"
+  ],
+  size: "350 sq. ft",
+  bedType: "1 King Bed + Cozy Sitting Area",
+  view: "Direct Sunshine & Mountain View Windows",
+  maxGuests: "2 - 3 Guests",
+  features: [
+    "Large Sun-Kissed Windows with Mountain Panorama",
+    "Comfortable Double Bed with Warm Bedding",
+    "Attached Private Bathroom with Electric Geyser & 24/7 Hot Water"
+  ],
+  detailedInclusions: [
+    "Expansive large windows bringing in natural morning sunlight and valley views",
+    "Premium double bed with warm floral blankets and clean pillows",
+    "Attached private bathroom equipped with electric geyser for 24/7 hot water",
+    "Cozy sofa seating arrangement and elegant room decor",
+    "Uninterrupted power backup with heavy generators",
+    "High-speed Wi-Fi and 24/7 room service"
+  ],
+  description: "A gorgeous deluxe room featuring large windows flooded with natural mountain sunlight, traditional rug flooring, cozy seating area, and comfortable double bed with attached bathroom and electric geyser for a peaceful stay in Swat."
+},
+  {
+  id: "vip-mountain-view",
+  name: "VIP Mountain View Room",
+  tagline: "Breathtaking Balcony Mountain Panorama",
+  pricePKR: 10000,
+  pricePerNight: "PKR 10,000",
+  originalPricePerNight: "PKR 12,500",
+  discountBadge: "20% OFF",
+  promoTag: "⭐ Special VIP Deal - 20% OFF",
+  image: "https://i.postimg.cc/YSK77BGq/Whats-App-Image-2026-10-07-at-3-08-05-PM.jpg",
+  images: [
+    "https://i.postimg.cc/YSK77BGq/Whats-App-Image-2026-10-07-at-3-08-05-PM.jpg",
+    "https://i.postimg.cc/yN4KKCgd/Whats-App-Image-2026-10-07-at-3-08-06-PM.jpg",
+    "https://i.postimg.cc/PqsHHnpq/Whats-App-Image-2026-10-07-at-3-08-06-PM-(1).jpg",
+    "https://i.postimg.cc/HLDmm1cj/Whats-App-Image-2026-10-07-at-3-08-07-PM.jpg",
+    "https://i.postimg.cc/LsKSSFY5/Whats-App-Image-2026-10-07-at-3-08-07-PM-(1).jpg",
+    "https://i.postimg.cc/43TDMvqB/Whats-App-Image-2026-10-07-at-3-13-06-PM.jpg"
+  ],
+  gallery: [
+    "https://i.postimg.cc/YSK77BGq/Whats-App-Image-2026-10-07-at-3-08-05-PM.jpg",
+    "https://i.postimg.cc/yN4KKCgd/Whats-App-Image-2026-10-07-at-3-08-06-PM.jpg",
+    "https://i.postimg.cc/PqsHHnpq/Whats-App-Image-2026-10-07-at-3-08-06-PM-(1).jpg",
+    "https://i.postimg.cc/HLDmm1cj/Whats-App-Image-2026-10-07-at-3-08-07-PM.jpg",
+    "https://i.postimg.cc/LsKSSFY5/Whats-App-Image-2026-10-07-at-3-08-07-PM-(1).jpg",
+    "https://i.postimg.cc/43TDMvqB/Whats-App-Image-2026-10-07-at-3-13-06-PM.jpg"
+  ],
+  size: "380 sq. ft",
+  bedType: "1 King Bed + 1 Single Bed",
+  view: "Direct Mountain & Peak Panorama",
+  maxGuests: "3 Adults",
+  features: [
+    "Private Balcony with 180° Mountain Views",
+    "VIP Interior & Sitting Area",
+    "Attached Private Bathroom with Electric Geyser & 24/7 Hot Water"
+  ],
+  detailedInclusions: [
+    "Private open-air balcony facing scenic Swat mountain peaks",
+    "1 Master King Bed plus additional single bed",
+    "Attached premium tiled bathroom equipped with electric geyser for constant hot water",
+    "Tea table set with fresh mountain breeze",
+    "Full generator power backup around the clock",
+    "Priority 24/7 in-room dining service"
+  ],
+  description: "VIP suite experience with private scenic balcony, luxury bedding, attached private bathroom with electric geyser, and unobstructed mountain views across Swat Valley."
+},
+ {
+  id: "guest-house-suite",
+  name: "Guest House Suite - 2 Rooms + TV Lounge",
+  tagline: "Ultimate Large Family & Group Suite",
+  pricePKR: 12000,
+  pricePerNight: "PKR 12,000",
+  image: "https://i.postimg.cc/jdmRS7w6/guesthouse-1-jpg.jpg",
+  images: [
+    "https://i.postimg.cc/jdmRS7w6/guesthouse-1-jpg.jpg",
+    "https://i.postimg.cc/g2hmX239/guesthouse-2-jpg.jpg",
+    "https://i.postimg.cc/P5DTp5YB/guesthouse-3-jpg.jpg",
+    "https://i.postimg.cc/Cx8SBxk3/guesthouse-4-jpg.jpg",
+    "https://i.postimg.cc/kgSq6gKL/guesthouse-5-jpg.jpg",
+    "https://i.postimg.cc/mg9Bzg7b/guesthouse-6-jpg.jpg",
+    "https://i.postimg.cc/mg9Bzg7Z/guesthouse-7-jpg.jpg",
+    "https://i.postimg.cc/52zbY28t/guesthouse-8-jpg.jpg"
+  ],
+  gallery: [
+    "https://i.postimg.cc/jdmRS7w6/guesthouse-1-jpg.jpg",
+    "https://i.postimg.cc/g2hmX239/guesthouse-2-jpg.jpg",
+    "https://i.postimg.cc/P5DTp5YB/guesthouse-3-jpg.jpg",
+    "https://i.postimg.cc/Cx8SBxk3/guesthouse-4-jpg.jpg",
+    "https://i.postimg.cc/kgSq6gKL/guesthouse-5-jpg.jpg",
+    "https://i.postimg.cc/mg9Bzg7b/guesthouse-6-jpg.jpg",
+    "https://i.postimg.cc/mg9Bzg7Z/guesthouse-7-jpg.jpg",
+    "https://i.postimg.cc/52zbY28t/guesthouse-8-jpg.jpg"
+  ],
+  size: "650 sq. ft",
+  bedType: "2 Master Bedrooms + Living Lounge",
+  view: "Panoramic Mountain & Valley View",
+  maxGuests: "6 - 8 Guests",
+  features: [
+    "2 Separate Bedrooms + Living TV Lounge",
+    "Private Dining Space for Families",
+    "2 Attached Private Bathrooms with Electric Geysers & 24/7 Hot Water"
+  ],
+  detailedInclusions: [
+    "Two fully private bedrooms with clean double/king beds",
+    "Spacious furnished living room with sofa set & LED TV",
+    "Two attached modern washrooms equipped with electric geysers for constant hot water",
+    "Family dining table for private in-suite meals",
+    "Heavy-duty generator backup for uninterrupted electricity",
+    "Dedicated room service attendant for tea & dining"
+  ],
+  description: "Complete guest house suite with two private master bedrooms, dedicated furnished TV lounge, private kitchen space, and two modern attached washrooms with electric geysers. Ideal for large families visiting Malam Jabba and Swat Valley."
+}
 ];
 
 export const AMENITIES = [
@@ -342,33 +418,43 @@ export const MENU_CATEGORIES: MenuCategory[] = [
 export const TESTIMONIALS: ReviewItem[] = [
   {
     id: "rev-1",
-    author: "Dr. Tariq & Family",
-    city: "Islamabad",
-    stayDate: "August 2026",
-    roomType: "Stayed in Guest House Suite",
-    locationDetails: "Islamabad · Stayed in Guest House Suite",
+    author: "Itx mazhar Khanx",
+    city: "Holiday | Family",
+    stayDate: "",
+    roomType: "",
+    locationDetails: "Holiday | Family",
     rating: 5,
-    comment: "Very safe for family, easy private parking for our Prado, and the Guest House Suite was huge and comfortable for our entire family."
+    comment: "Such a good & peaceful place for family and friends. Recently we are visit to the hotel it's luxury Vip rooms and good staff and delicious foods. and super view with garden. I recommend to visit malamjabba and Ihram hotel."
   },
   {
     id: "rev-2",
-    author: "Kamran & Family",
-    city: "Lahore",
-    stayDate: "September 2026",
-    roomType: "Stayed at Malam Jabba Road",
-    locationDetails: "Lahore · Stayed at Malam Jabba Road",
+    author: "Junaid Khan",
+    city: "Holiday | Family",
+    stayDate: "",
+    roomType: "",
+    locationDetails: "Holiday | Family",
     rating: 5,
-    comment: "The large open lawn and kids pool setup kept the children happy. Uninterrupted power supply with heavy generator backup made our stay super smooth."
+    comment: "The Most beautiful hotel and restaurant near malam jabba and a place where you can find relaxation and peace of mind.I really enjoyed my trip in this hotel as well as the owner welcomed us with traditional pashtoon hospitality.The mesmerising view from the balcony of the hotel is very breathtaking.If you are looking for a hotel and restaurant near malam jabba then this hotel is your destination.Thanks to Mr.Sajid Ali Khan for his efforts to provide such amazing services to the tourists.❤️"
   },
   {
     id: "rev-3",
-    author: "Shahid Khan",
-    city: "Peshawar",
-    stayDate: "October 2026",
-    roomType: "Family Mountain Trip",
-    locationDetails: "Peshawar · Family Mountain Trip",
+    author: "Zaheer Chiragh",
+    city: "Holiday | Family",
+    stayDate: "",
+    roomType: "",
+    locationDetails: "Holiday | Family",
     rating: 5,
-    comment: "Perfect location right on Malam Jabba Road. Peaceful mountain views, 24/7 steaming hot water, and fresh lawn BBQ in the evening!"
+    comment: "I had a fantastic experience at this hotel and would highly recommend it to anyone looking for a peaceful and enjoyable getaway. The location is simply wonderful, surrounded by scenic beauty that makes it perfect for relaxing and unwinding. The hotel is very kid-friendly, with plenty of amenities and activities to keep the little ones entertained, which made our family stay all the more enjoyable. The atmosphere was serene and quiet, offering a perfect escape from the hustle and bustle of daily life. In terms of value for money, this place exceeded expectations. The overall experience, combined with the excellent facilities and welcoming staff, made it worth every penny. I would highly recommend this hotel to families, couples, or anyone looking for a memorable and peaceful stay."
+  },
+  {
+    id: "rev-4",
+    author: "Muhammad Bilal",
+    city: "Holiday | Family",
+    stayDate: "",
+    roomType: "",
+    locationDetails: "Holiday | Family",
+    rating: 5,
+    comment: "Went from Lahore to Ihram Hotel, Malam Jabba in one go and reached at 9PM. It was a blind shot as we never visited there before, but it went out our best decision. The place is in itself a peaceful mountain spot where a family can stay, have fun, explore nature and relax. Worth mentioning Hazrat Ali (hotel manager cum coordinator cum cook) was really supportive. We stayed there in around 5k/night which includes mattress. Food was also decent. Though, we picked chapalli kabab from near market which were out of this world (fresh, tasty, crispy and full of flavour). Must revisit place, specially for families."
   }
 ];
  

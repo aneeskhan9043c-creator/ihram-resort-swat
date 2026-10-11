@@ -71,11 +71,11 @@ export const Navbar: React.FC<NavbarProps> = () => {
             {/* Direct Call Button */}
             <a
               href={primaryPhoneUrl}
-              className="bg-amber-500 hover:bg-amber-600 text-white p-2.5 sm:px-3.5 sm:py-2.5 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+              className="bg-white/40 hover:bg-white/70 backdrop-blur-md border border-slate-200/90 text-slate-900 p-2.5 sm:px-3.5 sm:py-2.5 rounded-xl shadow-xs hover:shadow-sm transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer active:scale-95"
               title="Call IHRAM Hotel (+92 319 0717774)"
               aria-label="Call IHRAM Hotel"
             >
-              <Phone className="w-5 h-5 shrink-0" />
+              <Phone className="w-5 h-5 shrink-0 text-amber-600" />
               <span className="hidden lg:inline font-semibold text-xs tracking-wide">
                 Call Now
               </span>

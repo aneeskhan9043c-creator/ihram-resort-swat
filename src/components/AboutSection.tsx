@@ -36,14 +36,14 @@ export const AboutSection: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-zinc-200/80 group aspect-4/3 bg-zinc-100">
             <img
               src="./images/regenerated_image_1791406010900.webp"
-              alt="Main Lawn Area"
+              alt="Lush Green Mountain Lawn & Valley Panorama"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] px-3 py-1 rounded-full border border-white/10">
-              Main Lawn Area
+            <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 shadow-md">
+              🌿 Lush Green Mountain Lawn &amp; Valley Panorama
             </div>
           </div>
 
@@ -51,29 +51,29 @@ export const AboutSection: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-zinc-200/80 group aspect-4/3 bg-zinc-100">
             <img
               src="./images/lawn-day.jpg"
-              alt="Outdoor Seating"
+              alt="Cozy Outdoor Lawn Seating & Fresh Mountain Air"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] px-3 py-1 rounded-full border border-white/10">
-              Outdoor Seating
+            <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 shadow-md">
+              ☕ Cozy Outdoor Lawn Seating &amp; Fresh Mountain Air
             </div>
           </div>
 
           {/* Card 3 */}
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-zinc-200/80 group aspect-4/3 bg-zinc-100">
             <img
-              src="./images/garden-night.jpg"
-              alt="Garden Night View"
+              src="./images/regenerated_image_1791651803458.webp"
+              alt="Magical Evening Garden & Malam Jabba Night Vibe"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] px-3 py-1 rounded-full border border-white/10">
-              Garden Night View
+            <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 shadow-md">
+              ✨ Magical Evening Garden &amp; Night Vibe
             </div>
           </div>
 
@@ -81,14 +81,14 @@ export const AboutSection: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-zinc-200/80 group aspect-4/3 bg-zinc-100">
             <img
               src="./images/pool-view.jpg"
-              alt="Swimming Pool Ground"
+              alt="Scenic Poolside Lawn & Relaxing Open Views"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] px-3 py-1 rounded-full border border-white/10">
-              Swimming Pool Ground
+            <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 shadow-md">
+              🏔️ Scenic Poolside Lawn &amp; Relaxing Open Views
             </div>
           </div>
 
@@ -96,14 +96,14 @@ export const AboutSection: React.FC = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-lg border border-zinc-200/80 group aspect-4/3 bg-zinc-100">
             <img
               src="./images/building-main.jpg"
-              alt="Daytime Lawn"
+              alt="Sunny Alpine Garden & Family Recreation Area"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md text-white text-[11px] px-3 py-1 rounded-full border border-white/10">
-              Daytime Lawn
+            <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full border border-white/15 shadow-md">
+              ☀️ Sunny Alpine Garden &amp; Family Recreation
             </div>
           </div>
         </div>

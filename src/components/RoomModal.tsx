@@ -32,8 +32,16 @@ export const RoomModal: React.FC<RoomModalProps> = ({ room, onClose }) => {
         aria-modal="true"
         aria-labelledby="modal-room-title"
       >
-        {/* Modal Header Image */}
-        <div className="relative aspect-16/10 w-full bg-zinc-900 shrink-0">
+        {/* Modal Header Image with Carousel Chevrons */}
+        <div className="relative aspect-16/10 w-full bg-zinc-900 shrink-0 group">
+          {room.discountBadge && (
+            <div className="absolute top-0 right-0 z-30">
+              <div className="bg-gradient-to-r from-red-600 via-rose-600 to-red-900 text-amber-200 px-4 py-2 shadow-2xl border-b border-l border-amber-300/80 rounded-bl-2xl font-serif text-xs sm:text-sm font-black tracking-wider flex items-center gap-2">
+                <span className="text-amber-300 drop-shadow">🎁</span>
+                <span className="drop-shadow-md">{room.discountBadge}</span>
+              </div>
+            </div>
+          )}
           <img
             src={currentImage}
             alt={room.name}
@@ -44,18 +52,54 @@ export const RoomModal: React.FC<RoomModalProps> = ({ room, onClose }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
           
+          {/* Carousel Left / Right Navigation Buttons */}
+          {galleryImages.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={() => {
+                  const currentIndex = galleryImages.indexOf(currentImage);
+                  const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                  setActiveImage(galleryImages[prevIndex]);
+                }}
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-all opacity-80 group-hover:opacity-100 z-10 cursor-pointer"
+                aria-label="Previous photo"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  const currentIndex = galleryImages.indexOf(currentImage);
+                  const nextIndex = (currentIndex + 1) % galleryImages.length;
+                  setActiveImage(galleryImages[nextIndex]);
+                }}
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-all opacity-80 group-hover:opacity-100 z-10 cursor-pointer"
+                aria-label="Next photo"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              
+              {/* Photo Index Counter */}
+              <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider z-10 border border-white/20">
+                {galleryImages.indexOf(currentImage) + 1} / {galleryImages.length}
+              </div>
+            </>
+          )}
+
           <button
             type="button"
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors z-10"
+            className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors z-10 cursor-pointer"
             aria-label="Close room details dialog"
           >
             <X className="w-5 h-5" />
           </button>
-          <div className="absolute bottom-3 left-5 right-5 text-white">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#E6D5B8]">
-              {room.view}
-            </span>
+          <div className="absolute bottom-3 left-5 right-5 text-white pointer-events-none">
             <h3 id="modal-room-title" className="text-xl sm:text-2xl font-serif font-bold text-white">
               {room.name}
             </h3>
@@ -95,12 +139,24 @@ export const RoomModal: React.FC<RoomModalProps> = ({ room, onClose }) => {
           <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-[#FAF8F5] border border-zinc-200/80">
             <div>
               <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider block">
-                Nightly Rate
+                Nightly Rate {room.discountBadge && <span className="text-amber-600 font-bold ml-1">({room.discountBadge})</span>}
               </span>
-              <span className="text-2xl font-serif font-bold text-zinc-900 tabular-nums">
-                {room.pricePerNight}
-              </span>
-              <span className="text-xs text-zinc-500 ml-1">/ night (Taxes included)</span>
+              <div className="flex items-center gap-2 mt-0.5">
+                {room.originalPricePerNight && (
+                  <span className="text-sm text-zinc-400 line-through font-normal">
+                    {room.originalPricePerNight}
+                  </span>
+                )}
+                <span className="text-2xl sm:text-3xl font-sans font-black text-zinc-900 tabular-nums">
+                  {room.pricePerNight}
+                </span>
+                <span className="text-xs font-bold text-zinc-600">/ night</span>
+              </div>
+              {room.promoTag && (
+                <div className="mt-1.5 inline-block bg-amber-50 text-amber-800 text-[10px] font-semibold px-2 py-0.5 rounded border border-amber-200">
+                  {room.promoTag}
+                </div>
+              )}
             </div>
             <div className="flex items-center gap-4 text-xs text-zinc-700">
               <div className="flex items-center gap-1.5">
