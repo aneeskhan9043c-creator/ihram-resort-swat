@@ -23,6 +23,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
 
   const navLinks = [
     { label: 'Rooms & Rates', href: '#rooms' },
+    { label: 'Car Rental', href: '#car-rental' },
     { label: 'Experience', href: '#experience' },
     { label: 'Key Amenities', href: '#facilities' },
     { label: 'Reviews', href: '#reviews' },

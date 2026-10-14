@@ -59,6 +59,11 @@ export const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
+                  <a href="#car-rental" className="text-zinc-400 hover:text-white transition-colors">
+                    Car Rental &amp; Transport
+                  </a>
+                </li>
+                <li>
                   <a href="#experience" className="text-zinc-400 hover:text-white transition-colors">
                     The Mountain Experience
                   </a>

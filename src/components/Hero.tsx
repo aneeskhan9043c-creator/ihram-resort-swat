@@ -25,21 +25,21 @@ export const Hero: React.FC = () => {
             e.currentTarget.src = '/unnamed.webp';
           }}
         />
-        {/* Dual-layer dark gradient overlay guaranteeing 100% crisp text readability */}
+        {/* Dual-layer dark gradient overlay calibrated for iOS frosted glass vibrancy */}
         <div
-          className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-900/60 z-10"
+          className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-900/40 z-10"
           aria-hidden="true"
         />
       </div>
 
       {/* 2. TEXT LAYOUT & POSITIONING (Shifted Upwards into Sky Area) */}
       <div className="pt-8 pb-12 sm:pt-12 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto z-20 relative w-full">
-        {/* 4. SUBTLE EDITORIAL GLASS CONTAINER */}
+        {/* 4. AUTHENTIC IPHONE / IOS FROSTED WHITE GLASS CONTAINER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-slate-950/40 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl max-w-3xl"
+          className="bg-white/30 sm:bg-white/35 backdrop-blur-2xl backdrop-saturate-150 p-6 sm:p-8 rounded-3xl border border-white/50 shadow-[0_20px_50px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.7)] max-w-3xl ring-1 ring-white/30"
         >
           {/* 3. COMPACT INTEGRATED BADGE PILL (Fade-In Down with 100ms delay) */}
           <motion.div
@@ -48,14 +48,14 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
             className="mb-4 inline-block"
           >
-            <div className="inline-flex items-center gap-2 bg-slate-950/60 text-slate-200 border border-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold shadow-lg flex-wrap sm:flex-nowrap">
-              <span className="flex items-center gap-1.5 text-amber-300">
+            <div className="inline-flex items-center gap-2 bg-black/30 text-white border border-white/35 backdrop-blur-lg px-4 py-1.5 rounded-full text-xs font-semibold shadow-sm flex-wrap sm:flex-nowrap">
+              <span className="flex items-center gap-1.5 text-amber-300 font-medium">
                 <span>📍</span>
                 <span>Main Malam Jabba Road, Swat</span>
               </span>
-              <span className="text-slate-400 font-normal hidden sm:inline">•</span>
-              <span className="flex items-center gap-1 text-slate-100">
-                <span className="text-amber-400">⭐</span>
+              <span className="text-white/60 font-normal hidden sm:inline">•</span>
+              <span className="flex items-center gap-1 text-white font-medium">
+                <span className="text-amber-300">⭐</span>
                 <span>4.7 Rated on Google</span>
               </span>
             </div>
@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
-            className="text-sm sm:text-base md:text-lg text-slate-200 font-normal max-w-xl leading-relaxed mb-6 drop-shadow"
+            className="text-sm sm:text-base md:text-lg text-white/95 font-medium max-w-xl leading-relaxed mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
           >
             Experience peaceful family comfort on Main Malam Jabba Road. Enjoy spacious Guest House Suites, 24/7 hot water, uninterrupted generator power, and a green lawn with kids pool.
           </motion.p>
@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
             {/* Secondary CTA: Explore Suites & Rates */}
             <a
               href="#rooms"
-              className="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md font-semibold py-3.5 px-6 rounded-xl transition-all duration-300 text-sm sm:text-base text-center cursor-pointer hover:scale-105 active:scale-95"
+              className="bg-white/25 hover:bg-white/35 text-white border border-white/50 backdrop-blur-xl font-semibold py-3.5 px-6 rounded-xl transition-all duration-300 text-sm sm:text-base text-center cursor-pointer hover:scale-105 active:scale-95 shadow-md shadow-black/10"
             >
               <span>Explore Suites &amp; Rates ↓</span>
             </a>

@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
 import { RoomsSection } from './components/RoomsSection';
+import { CarRentalSection } from './components/CarRentalSection';
 import { AmenitiesSection } from './components/AmenitiesSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { LocationSection } from './components/LocationSection';
@@ -33,6 +34,9 @@ export default function App() {
         <AboutSection />
         {/* 4. OUR ROOMS & SUITES */}
         <RoomsSection onSelectRoom={(room) => setSelectedRoom(room)} />
+
+        {/* 4.5 CAR RENTAL SERVICES */}
+        <CarRentalSection />
         {/* 5. KEY AMENITIES & FACILITIES */}
         <AmenitiesSection />
         {/* 6. GUEST REVIEWS & TESTIMONIALS */}
